@@ -1,0 +1,11 @@
+version: 1
+services:
+  - type: web
+    name: flask-weather-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    autoDeploy: true
+    envVars:
+      - key: FLASK_ENV
+        value: production
